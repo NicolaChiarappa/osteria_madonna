@@ -10,7 +10,7 @@ html {
 
 
 .custom-img {
-  background-image: url('/hero.webp');
+  background-image: url('/hero.jpeg');
   background-size: cover;
   background-position: center;
 }

@@ -4,33 +4,26 @@ import HStack from "../Layout/HStack";
 import VStack from "../Layout/VStack";
 
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
-import Button from "./Button";
+import Button from "../Bricks/Button/Button";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <HStack style='items-center bg-success justify-between sti'>
-      <div className='p-3'>
-        <Image
-          priority
-          src='/logo.svg'
-          alt=''
-          width={150}
-          height={150}
-          className='fill-blue-500'
-        />
+    <HStack style='fixed w-full  text-white z-20 p-4 justify-between px-10'>
+      <div>
+        <Image alt='' src='/logo.svg' width={180} height={180}></Image>
       </div>
-
-      <div className=' flex flex-row items-center max-sm:hidden'>
-        <h1 className='text-4xl font-sans '>Ciao</h1>
-      </div>
-      <HStack className='items-center sm:hidden mr-5 justify-start'>
+      <HStack style='items-center flex max-sm:hidden'>
+        <Link href='/about'>
+          <h1>About</h1>
+        </Link>
+      </HStack>
+      <HStack style='flex sm:hidden'>
         <Button
           onClick={() => {
-            alert("mobile");
+            alert("button mobile");
           }}
-        >
-          alert
-        </Button>
+        ></Button>
       </HStack>
     </HStack>
   );
