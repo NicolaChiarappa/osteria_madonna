@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Button from "../Bricks/Button/Button";
+import Button from "../Bricks/Button";
 import VStack from "../Layout/VStack";
 import HStack from "../Layout/HStack";
+import Link from "next/link";
 
 //this is my hero page
 
@@ -29,9 +30,11 @@ const Hero = () => {
           height={100}
           width={1}
         ></Image>
-        <Button style='bg-secondary w-36 h-16 active:bg-secondary'>
-          <p className='font-miofont font-semibold text-2xl'>Scopri</p>
-        </Button>
+        <Link href='#scopri'>
+          <Button style='bg-secondary w-36 h-16 active:bg-secondary px-6 py-4 rounded-3xl'>
+            <p className='font-miofont font-semibold text-3xl'>Scopri</p>
+          </Button>
+        </Link>
       </VStack>
     </div>
   );

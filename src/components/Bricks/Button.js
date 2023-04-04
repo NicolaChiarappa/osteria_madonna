@@ -3,10 +3,7 @@ import { IoMenu } from "react-icons/io5";
 
 const Button = ({ style = "", onClick, icon = null, children }) => {
   return (
-    <button
-      className={"rounded-lg m-5 h-fit w-fit active:bg-transparent " + style}
-      onClick={onClick}
-    >
+    <button className={"rounded-2xl  h-fit w-fit " + style} onClick={onClick}>
       {icon}
       {children}
     </button>

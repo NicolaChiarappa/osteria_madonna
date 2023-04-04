@@ -4,10 +4,13 @@
 @import url("https://use.typekit.net/kyv7urt.css");
 
 
+html {}
+
 html,
 body {
   max-width: 100vw;
   background-color: bisque;
+
 
 }
 
