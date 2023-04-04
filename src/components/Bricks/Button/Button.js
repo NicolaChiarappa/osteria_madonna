@@ -1,11 +1,14 @@
 import React from "react";
 import { IoMenu } from "react-icons/io5";
 
-const Button = ({ style = "", onClick }) => {
-  const string = "rounded-lg m-5" + style;
+const Button = ({ style = "", onClick, icon = null, children }) => {
   return (
-    <button className={string} onClick={onClick}>
-      <IoMenu size='50px' color='#385738'></IoMenu>
+    <button
+      className={"rounded-lg m-5 h-fit w-fit active:bg-transparent " + style}
+      onClick={onClick}
+    >
+      {icon}
+      {children}
     </button>
   );
 };

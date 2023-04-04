@@ -9,11 +9,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      primary: "#385738",
-      secondary: "#fbbe0e",
-      white: "#fdfdfd",
-      success: "#917639",
+    extend: {
+      colors: {
+        primary: "#385738",
+        secondary: "#FFE4C4",
+        white: "#fdfdfd",
+        success: "#917639",
+      },
+      fontFamily: {
+        "miofont": "myriad-variable, sans-serif",
+      },
     },
   },
   plugins: [],
