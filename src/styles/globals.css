@@ -4,7 +4,9 @@
 @import url("https://use.typekit.net/kyv7urt.css");
 
 
-html {}
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -14,9 +16,20 @@ body {
 
 }
 
-.custom-img {
+.hero-img {
   background-image: url(/hero.jpg);
   background-position: center;
   background-size: cover;
 
+}
+
+.motto-img {
+  background-image: url(/motto.png);
+  background-position: left;
+  background-size: cover;
+
+}
+
+.myimg {
+  shape-outside: ellipse();
 }

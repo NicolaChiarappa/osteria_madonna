@@ -16,13 +16,13 @@ const Navbar = () => {
 
   return (
     <>
-      <HStack style='sticky top-0 w-full  text-white z-30 justify-between  h-fit bg-secondary items-center py-3'>
+      <HStack style='sticky top-0 w-full  text-white z-30 justify-between  h-fit bg-secondary items-center py-3 '>
         <Link href='/' className='ml-7'>
           <Image alt='' src='/logo.svg' width={100} height={100}></Image>
         </Link>
         <NavItems></NavItems>
 
-        <HStack style='flex sm:hidden  items-center  h-fit mr-8'>
+        <HStack style='flex lg:hidden  items-center  h-fit mr-8 '>
           <Button
             onClick={() => {
               setShow("visible");
@@ -38,29 +38,29 @@ const Navbar = () => {
 
 const NavItems = () => {
   return (
-    <HStack style='items-center flex max-sm:hidden space-x-14 mr-10'>
+    <HStack style='items-center flex max-lg:hidden space-x-10 mr-10'>
       <Link href='/'>
-        <Heading as='h1' size='2xl'>
+        <Heading as='h1' size='3xl'>
           Home
         </Heading>
       </Link>
       <Link href='/menu'>
-        <Heading as='h1' size='2xl'>
+        <Heading as='h1' size='3xl'>
           Menu
         </Heading>
       </Link>
       <Link href='/about'>
-        <Heading as='h1' size='2xl'>
+        <Heading as='h1' size='3xl'>
           Chi siamo
         </Heading>
       </Link>
       <Link href='/cantina'>
-        <Heading as='h1' size='2xl'>
+        <Heading as='h1' size='3xl'>
           La cantina
         </Heading>
       </Link>
       <Link href='/prenota'>
-        <Heading as='h1' size='2xl'>
+        <Heading as='h1' size='3xl'>
           Prenota
         </Heading>
       </Link>
