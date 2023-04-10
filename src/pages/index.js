@@ -5,10 +5,9 @@ import Link from "next/link";
 
 import Navbar from "../components/Components/Navbar";
 import Hero from "@/components/Components/Hero";
-import Menu from "@/components/Components/Menu";
-import VStack from "@/components/Layout/VStack";
-import HStack from "@/components/Layout/HStack";
-import Button from "@/components/Bricks/Button";
+import Motto from "@/components/Components/Motto";
+import Menu_Hero from "@/components/Components/Menu_Hero";
+import Footer from "@/components/Components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,33 +22,9 @@ export default function Home() {
       </Head>
       <Navbar></Navbar>
       <Hero></Hero>
-      <VStack
-        style=' items-center relative w-full   overflow-hidden  rtl:ml-0  mt-24  bg-gradient-to-t from-primary to-transparent pt-28 md:pt-64 justify-center h-screen'
-        id='scopri'
-      >
-        <HStack style=' items-center  '>
-          <div className='  lg:w-3/4  h-fit  w-full ml-16 max-lg:ml-6 z-20 '>
-            <p className='lg:text-9xl max-lg:text-6xl font-miofont  font-bold  text-white text-center leading-10'>
-              Spirito tradizionale ma attento al futuro
-            </p>
-          </div>
-          <div className=' absolute top-15  -right-60  '>
-            <Image
-              alt=''
-              className='myimg  '
-              src='/motto.png'
-              width={1000}
-              height={1000}
-            ></Image>
-          </div>
-        </HStack>
-
-        <Link href='/about'>
-          <Button style=' relative py-8 px-10 bg-secondary text-center font-miofont font-bold text-2xl my-7  '>
-            Leggi la nostra storia
-          </Button>
-        </Link>
-      </VStack>
+      <Motto></Motto>
+      <Menu_Hero></Menu_Hero>
+      <Footer></Footer>
     </>
   );
 }
