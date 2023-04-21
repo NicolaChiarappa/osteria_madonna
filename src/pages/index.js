@@ -4,9 +4,9 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 
 import Navbar from "../components/Components/Navbar";
-import Hero from "@/components/Components/Hero";
-import Motto from "@/components/Components/Motto";
-import Menu_Hero from "@/components/Components/Menu_Hero";
+import Hero from "@/components/Components/index/Hero";
+import Motto from "@/components/Components/index/Motto";
+import Menu_Hero from "@/components/Components/index/Menu_Hero";
 import Footer from "@/components/Components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });

@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Button from "../Bricks/Button";
-import VStack from "../Layout/VStack";
-import HStack from "../Layout/HStack";
+import Button from "@/components/Bricks/Button";
+import VStack from "@/components/Layout/VStack";
+import HStack from "@/components/Layout/HStack";
 import Link from "next/link";
 
 //this is my hero page

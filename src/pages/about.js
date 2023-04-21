@@ -1,10 +1,14 @@
+import Footer from "@/components/Components/Footer";
+import Navbar from "@/components/Components/Navbar";
 import React from "react";
 
 const about = () => {
   return (
-    <div>
-      <p>io sono about</p>
-    </div>
+    <>
+      <Navbar></Navbar>
+      <div className='h-screen'></div>
+      <Footer></Footer>
+    </>
   );
 };
 

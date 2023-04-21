@@ -38,15 +38,15 @@ const Navbar = () => {
 
 const NavItems = () => {
   return (
-    <HStack style='items-center flex max-lg:hidden space-x-10 mr-10'>
-      <Link href='/'>
-        <Heading as='h1' size='3xl'>
-          Home
-        </Heading>
-      </Link>
+    <HStack style='items-center flex max-lg:hidden space-x-10 mr-10 '>
       <Link href='/menu'>
         <Heading as='h1' size='3xl'>
           Menu
+        </Heading>
+      </Link>
+      <Link href='/menu_gruppi'>
+        <Heading as='h1' size='3xl'>
+          Menu gruppi
         </Heading>
       </Link>
       <Link href='/about'>
