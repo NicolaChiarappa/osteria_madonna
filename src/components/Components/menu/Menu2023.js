@@ -13,7 +13,9 @@ const Menu2023 = () => {
       <Heading as='h3' size='4xl'>
         Il nostro menu 2023
       </Heading>
+      {/*here user can choose items section of menu, set is controlling state of button group */}
       <ButtonGroup set={setSezione}> </ButtonGroup>
+      {/*this vstack is fetching and showing datas from json and section is controlled by buttongropu of above  */}
       <VStack style='min-w-full  items-center space-y-10'>
         {menu2023_obj[sezione].map((piatti) => {
           return <Portata key={piatti.id} {...piatti}></Portata>;
@@ -25,7 +27,6 @@ const Menu2023 = () => {
 
 const ButtonGroup = ({ set }) => {
   const [btnactive, setBtnactive] = useState("antipasti");
-  console.log(btnactive);
 
   return (
     <HStack style='justify-center space-x-5  mt-10 flex-wrap'>
@@ -57,6 +58,9 @@ const ButtonGroup = ({ set }) => {
   );
 };
 
+{
+  /*every button in button group have a state controlled by button group, if its state is active color change from gray to black */
+}
 const MenuButton = ({ sezione, set, setBtn, active }) => {
   const color =
     active == sezione.toLowerCase() ? "text-black" : "text-gray-500";
@@ -75,6 +79,9 @@ const MenuButton = ({ sezione, set, setBtn, active }) => {
   );
 };
 
+{
+  /*portata is components of every single item with its name and price*/
+}
 const Portata = ({ item, prezzo }) => {
   return (
     <HStack style='justify-between space-x-5  lg:w-1/2 max-lg:w-3/4 mx-10'>

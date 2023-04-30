@@ -19,11 +19,11 @@ export const menu_gruppi_obj = [
         ],
       },
       {
-        title: "a seguire",
+        title: "A seguire",
         items: ["Risottino con pere al brandy", "E gorgonzola Gelmini"],
       },
       {
-        title: "dolce",
+        title: "Dolce",
         items: ["Torta Goy morbida al cioccolato con panna montata"],
       },
     ],
@@ -52,7 +52,7 @@ export const menu_gruppi_obj = [
         ],
       },
       {
-        title: "a seguire",
+        title: "A seguire",
         items: [
           "Faraona disossata e ripiena con patata schiacciata e mela cotogna",
         ],

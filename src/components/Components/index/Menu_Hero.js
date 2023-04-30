@@ -28,7 +28,7 @@ const Menu_Hero = () => {
         </div>
       </HStack>
 
-      <Link href='/about'>
+      <Link href='/prenota'>
         <Button style=' relative py-6 px-6 bg-secondary text-center font-miofont font-bold text-2xl my-7  '>
           Prenota
         </Button>

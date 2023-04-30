@@ -9,7 +9,6 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    //ciao
     <div className='relative hero-img min-h-fit'>
       {/*overlay */}
       <div className='relative  bg-gradient-to-b from-primary to-transparent   h-screen z-0 ' />

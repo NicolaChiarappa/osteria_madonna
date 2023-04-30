@@ -3,7 +3,7 @@ import Image from "next/image";
 import HStack from "../Layout/HStack";
 import VStack from "../Layout/VStack";
 
-import { IoMenu } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import Button from "../Bricks/Button";
@@ -13,6 +13,7 @@ import Menu from "./Menu";
 
 const Navbar = () => {
   const [show, setShow] = useState("invisible");
+  const [blur, setBlur] = useState(" ");
 
   return (
     <>
@@ -25,13 +26,20 @@ const Navbar = () => {
         <HStack style='flex lg:hidden  items-center  h-fit mr-8 '>
           <Button
             onClick={() => {
-              setShow("visible");
+              setShow(show == "visible" ? "invisible" : "visible");
+              setBlur(blur == " " ? " backdrop-blur-[2px]" : " ");
             }}
-            icon={<IoMenu size='50px' color='#385738'></IoMenu>}
+            icon={
+              show == "invisible" ? (
+                <IoMenu size='50px' color='#385738'></IoMenu>
+              ) : (
+                <IoClose size='50px' color='#385738'></IoClose>
+              )
+            }
           ></Button>
         </HStack>
       </HStack>
-      <Menu show={show} setShow={setShow}></Menu>
+      <Menu show={show} setShow={setShow} blur={blur}></Menu>
     </>
   );
 };

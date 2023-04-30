@@ -6,16 +6,18 @@ import Heading from "@/components/Bricks/Heading";
 import { useState } from "react";
 import { menu_gruppi_obj } from "@/menu_gruppi_obj";
 
+//most of these components are described in Menu2023.js
+
 const Menu2023 = () => {
   const [numeroMenu, setNumeroMenu] = useState("0");
-  //console.log(menu_gruppi_obj[numeroMenu]["portate"]);
 
   return (
     <VStack style='relative min-h-fit  items-center my-10 space-y-11'>
       <Heading as='h3' size='4xl'>
-        Cosa proponiamo ai gruppi
+        Proposte ai gruppi
       </Heading>
       <ButtonGroup set={setNumeroMenu}> </ButtonGroup>
+      {/*in this vstack we are fetching datas from a json, we are taking for every single menu all sections. every section have a title and a list of items*/}
       <VStack>
         {menu_gruppi_obj[numeroMenu]["portate"].map((sezione) => {
           return (
@@ -38,7 +40,7 @@ const Menu2023 = () => {
 };
 
 const ButtonGroup = ({ set }) => {
-  const [btnactive, setBtnactive] = useState("antipasti");
+  const [btnactive, setBtnactive] = useState("0");
 
   return (
     <HStack style='justify-center space-x-5  mt-10 flex-wrap'>
@@ -88,6 +90,9 @@ const MenuButton = ({ sezione, set, setBtn, active }) => {
   );
 };
 
+{
+  /*this is a single section of a menu with title and a list of items. we are using items in a vstack to show vertically all items */
+}
 const Sezione = ({ title, items }) => {
   items.map((item) => console.log(item));
   return (
