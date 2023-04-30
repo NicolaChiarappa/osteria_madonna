@@ -22,6 +22,7 @@ const Menu2023 = () => {
         {menu_gruppi_obj[numeroMenu]["portate"].map((sezione) => {
           return (
             <Sezione
+              key={sezione["title"]}
               title={sezione["title"]}
               items={sezione["items"]}
             ></Sezione>
@@ -101,7 +102,9 @@ const Sezione = ({ title, items }) => {
       <VStack style='h-fit space-y-6 mt-2 px-4'>
         {items.map((item) => {
           return (
-            <p className='font-miofont font-medium text-center '>{item}</p>
+            <p className='font-miofont font-medium text-center ' key={item}>
+              {item}
+            </p>
           );
         })}
       </VStack>
