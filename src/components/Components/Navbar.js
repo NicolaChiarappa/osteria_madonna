@@ -57,14 +57,14 @@ const NavItems = () => {
           Menu gruppi
         </Heading>
       </Link>
-      <Link href='/about'>
-        <Heading as='h1' size='3xl'>
-          Chi siamo
-        </Heading>
-      </Link>
       <Link href='/cantina'>
         <Heading as='h1' size='3xl'>
           La cantina
+        </Heading>
+      </Link>
+      <Link href='/about'>
+        <Heading as='h1' size='3xl'>
+          Chi siamo
         </Heading>
       </Link>
       <Link href='/prenota'>

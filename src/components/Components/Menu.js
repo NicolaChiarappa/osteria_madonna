@@ -21,11 +21,11 @@ const Menu = ({ show, setShow, blur }) => {
           <Link href='/menu_gruppi'>
             <p className='text-4xl text-black font-semibold '>Menu gruppi</p>
           </Link>
-          <Link href='/about'>
-            <p className='text-4xl text-black font-semibold'>Chi siamo</p>
-          </Link>
           <Link href='/cantina'>
             <p className='text-4xl text-black font-semibold'>La cantina</p>
+          </Link>
+          <Link href='/about'>
+            <p className='text-4xl text-black font-semibold'>Chi siamo</p>
           </Link>
           <Link href='/prenota'>
             <p className='text-4xl text-black font-semibold'>Prenota</p>
