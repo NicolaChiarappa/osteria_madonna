@@ -19,7 +19,7 @@ const Motto = () => {
         </div>
         <div className=' absolute top-15  -right-60  '>
           <Image
-            alt=''
+            alt='foto decorativa piatto preparato da noi'
             className='myimg  '
             src='/motto.png'
             width={1000}

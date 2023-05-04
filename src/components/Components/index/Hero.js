@@ -17,7 +17,7 @@ const Hero = () => {
       {
         <VStack style='absolute top-0 right-0 items-center justify-start min-h-screen  pt-6 z-20 w-full space-y-12 '>
           <Image
-            alt=''
+            alt='logo bianco osteria della madonna'
             src='/logo2.svg'
             width={100}
             height={100}
@@ -25,14 +25,14 @@ const Hero = () => {
           ></Image>
           <Image
             className='md:hidden w-full px-[5%]'
-            alt=''
+            alt='titolo osteria della madonna desktop'
             src='/titolo_madonna.svg'
             width={100}
             height={100}
           ></Image>
           <Image
             className='max-md:hidden w-full px-[20%]'
-            alt=''
+            alt='titolo osteria della madonna mobile'
             src='/titolo_madonna.svg'
             height={100}
             width={1}

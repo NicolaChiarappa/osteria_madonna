@@ -19,7 +19,7 @@ const Menu_Hero = () => {
         </div>
         <div className=' absolute top-15  -left-60  '>
           <Image
-            alt=''
+            alt='foto decorativa piatto-preparato da noi'
             className='myimg  '
             src='/menuhero.png'
             width={950}
