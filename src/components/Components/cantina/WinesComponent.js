@@ -16,7 +16,7 @@ const WinesComponent = () => {
       : [];
   listaregioni = [...new Set(listaregioni)];
   console.log(listaregioni);
-  const [regione, setRegione] = useState(listaregioni[0]);
+  const [regione, setRegione] = useState(0);
 
   return (
     <VStack style='relative min-h-fit  items-center my-10 space-y-11'>
@@ -37,7 +37,7 @@ const WinesComponent = () => {
           {vini[localita]["categorie"].map((category) => {
             return (
               <option key={category["id"]} value={category["id"]}>
-                {category["title"]}{" "}
+                {category["title"]}
               </option>
             );
           })}
