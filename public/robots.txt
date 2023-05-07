@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://https://osteria-madonna-r08vep8f5-nicolachiarappa2001-gmailcom.vercel.app/sitemap.xml
+Sitemap: https://osteria-madonna-r8rwo3gsg-nicolachiarappa2001-gmailcom.vercel.app/robots.txt/sitemap.xml
