@@ -22,7 +22,7 @@ export default function Home() {
           name='google-site-verification'
           content='7NX12AF8JTDoHXD23_CE8ENhGa9GnNmuBW8TYviMxN8'
         />
-        <link rel='icon' href='/osteria.ico' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <Navbar></Navbar>

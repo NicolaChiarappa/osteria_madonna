@@ -14,7 +14,7 @@ const menu_gruppi = () => {
           content="l'osteria della madonna propone menu per gruppi di persone"
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/osteria.ico' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar></Navbar>
       <MenuGruppi2023></MenuGruppi2023>

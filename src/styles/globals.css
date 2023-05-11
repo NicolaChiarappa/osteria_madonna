@@ -18,14 +18,14 @@ body {
 }
 
 .hero-img {
-  background-image: url(/hero.jpg);
+  background-image: url(/hero.webp);
   background-position: center;
   background-size: cover;
 
 }
 
 .motto-img {
-  background-image: url(/motto.png);
+  background-image: url(/motto.webp);
   background-position: left;
   background-size: cover;
 

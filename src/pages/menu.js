@@ -13,7 +13,7 @@ export default function MenuPage() {
           content="il menu 2023 dell'osteria della madonna"
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/osteria.ico' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar></Navbar>
       <Menu2023></Menu2023>

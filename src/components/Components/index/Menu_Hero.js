@@ -21,7 +21,7 @@ const Menu_Hero = () => {
           <Image
             alt='foto decorativa piatto-preparato da noi'
             className='myimg  '
-            src='/menuhero.png'
+            src='/menuhero.webp'
             width={950}
             height={1000}
           ></Image>

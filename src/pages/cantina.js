@@ -13,7 +13,7 @@ const cantina = () => {
           content="la selezione di vini dell' osteria della madonna"
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/osteria.ico' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar />
       <WinesComponent />
