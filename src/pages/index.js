@@ -18,7 +18,10 @@ export default function Home() {
         <title>Osteria della Madonna-Pavia</title>
         <meta name='description' content='osteria tipica nel centro di Pavia' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-
+        <meta
+          name='google-site-verification'
+          content='7NX12AF8JTDoHXD23_CE8ENhGa9GnNmuBW8TYviMxN8'
+        />
         <link rel='icon' href='/osteria.ico' />
       </Head>
 
