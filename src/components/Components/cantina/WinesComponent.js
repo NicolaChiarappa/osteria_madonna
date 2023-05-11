@@ -17,6 +17,7 @@ const WinesComponent = () => {
   listaregioni = [...new Set(listaregioni)];
   console.log(listaregioni);
   const [regione, setRegione] = useState(0);
+  console.log(regione);
 
   return (
     <VStack style='relative min-h-fit  items-center my-10 space-y-11'>
@@ -50,8 +51,15 @@ const WinesComponent = () => {
               setRegione(e.target.value);
             }}
           >
+            <option selected disabled hidden>
+              Scegli Regione
+            </option>
             {listaregioni.map((regione) => {
-              return <option key={regione}>{regione}</option>;
+              return (
+                <option key={regione} value={regione}>
+                  {regione}
+                </option>
+              );
             })}
           </select>
         ) : (

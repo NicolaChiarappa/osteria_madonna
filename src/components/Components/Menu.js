@@ -8,10 +8,10 @@ const Menu = ({ show, setShow, blur }) => {
   const stile = show + " " + blur;
   console.log(stile);
   return (
-    <VStack style={"fixed right-0 top-25 w-full h-screen  z-[30]  " + stile}>
+    <VStack style={"fixed right-0 top-25 w-full h-[7000px]  z-[30]  " + stile}>
       <VStack
         style={
-          "absolute right-0 top-25 h-screen w-3/4 z-[50]  bg-secondary overflow-hidden     "
+          "absolute right-0 top-25 h-[7000px] w-3/4 z-[50]  bg-secondary overflow-hidden     "
         }
       >
         <VStack style='items-start space-y-10 mt-9 ml-4'>
