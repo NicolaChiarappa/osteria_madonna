@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HStack from "@/components/Layout/HStack";
 import Button from "@/components/Bricks/Button";
 import VStack from "@/components/Layout/VStack";
@@ -6,18 +6,32 @@ import Heading from "@/components/Bricks/Heading";
 import { IoChevronDownOutline } from "react-icons/io5";
 import { useState, useRef } from "react";
 import { vini } from "@/vini.js";
+import { useForceUpdate } from "framer-motion";
 
 const WinesComponent = () => {
   const [localita, setLocalita] = useState(0);
   const [cat, setCat] = useState(0);
-  let listaregioni =
-    localita == 1
-      ? vini[localita]["categorie"][cat]["items"].map((reg) => reg.region)
-      : [];
-  listaregioni = [...new Set(listaregioni)];
-  console.log(listaregioni);
-  const [regione, setRegione] = useState(0);
-  console.log(regione);
+
+  function listaregionifunc(localita, cat) {
+    let lista = [];
+    if (localita == 1) {
+      lista = vini[localita]["categorie"][cat]["items"].map(
+        (reg) => reg.region
+      );
+    }
+    lista = [...new Set(lista)];
+
+    return lista;
+  }
+
+  const [regione, setRegione] = useState(() => {
+    const firstregione = listaregionifunc(localita, cat);
+    return firstregione[0];
+  });
+
+  useEffect(() => {
+    setRegione(listaregionifunc(localita, cat)[0]);
+  }, [localita, cat]);
 
   return (
     <VStack style='relative min-h-fit  items-center my-10 space-y-11'>
@@ -25,7 +39,13 @@ const WinesComponent = () => {
         La nostra selezione di vini
       </Heading>
       {/*here user can choose items section of menu, set is controlling state of button group */}
-      <ButtonGroup set={setLocalita}> </ButtonGroup>
+      <ButtonGroup
+        set={setLocalita}
+        cat={cat}
+        localita={localita}
+        setRegione={setRegione}
+        listaregionifunc={listaregionifunc}
+      ></ButtonGroup>
       <HStack style='justify-center w-3/4 items-center space-x-3 '>
         <select
           className='bg-secondary'
@@ -51,16 +71,18 @@ const WinesComponent = () => {
               setRegione(e.target.value);
             }}
           >
-            <option selected disabled hidden>
-              Scegli Regione
+            <option value={listaregionifunc(localita, cat)[0]} selected>
+              {listaregionifunc(localita, cat)[0]}
             </option>
-            {listaregioni.map((regione) => {
-              return (
-                <option key={regione} value={regione}>
-                  {regione}
-                </option>
-              );
-            })}
+            {listaregionifunc(localita, cat)
+              .slice(1)
+              .map((regione) => {
+                return (
+                  <option key={regione} value={regione}>
+                    {regione}
+                  </option>
+                );
+              })}
           </select>
         ) : (
           <></>
@@ -81,7 +103,7 @@ const WinesComponent = () => {
               );
             })
           : vini[localita]["categorie"][cat]["items"].map((vini) => {
-              if (vini.region == regione) {
+              if (vini.region === regione) {
                 return (
                   <Vino
                     key={vini.id}
@@ -140,7 +162,9 @@ const MenuButton = ({ sezione, set, setBtn, active, pos }) => {
     <Button
       style={stile}
       onClick={() => {
-        set(pos);
+        set(() => {
+          return pos;
+        });
         setBtn(sezione.toLowerCase());
       }}
     >

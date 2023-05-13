@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Menu = ({ show, setShow, blur }) => {
   const stile = show + " " + blur;
-  console.log(stile);
+
   return (
     <VStack style={"fixed right-0 top-25 w-full h-[7000px]  z-[30]  " + stile}>
       <VStack
