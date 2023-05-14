@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Select } from "react";
 import HStack from "@/components/Layout/HStack";
 import Button from "@/components/Bricks/Button";
 import VStack from "@/components/Layout/VStack";
@@ -71,18 +71,19 @@ const WinesComponent = () => {
               setRegione(e.target.value);
             }}
           >
-            <option value={listaregionifunc(localita, cat)[0]} selected>
-              {listaregionifunc(localita, cat)[0]}
-            </option>
-            {listaregionifunc(localita, cat)
-              .slice(1)
-              .map((regione) => {
-                return (
-                  <option key={regione} value={regione}>
-                    {regione}
-                  </option>
-                );
-              })}
+            {listaregionifunc(localita, cat).map((regione) => {
+              return (
+                <option
+                  key={regione}
+                  value={regione}
+                  selected={
+                    regione == listaregionifunc(localita, cat)[0] ? true : false
+                  }
+                >
+                  {regione}
+                </option>
+              );
+            })}
           </select>
         ) : (
           <></>
