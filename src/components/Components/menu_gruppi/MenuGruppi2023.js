@@ -86,7 +86,7 @@ const MenuButton = ({ sezione, set, setBtn, active }) => {
         setBtn(sezione.toLowerCase());
       }}
     >
-      {sezione}
+      {parseInt(sezione) + 1}
     </Button>
   );
 };
