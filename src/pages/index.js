@@ -16,7 +16,10 @@ export default function Home() {
     <>
       <Head>
         <title>Osteria della Madonna-Pavia</title>
-        <meta name='description' content='osteria tipica nel centro di Pavia' />
+        <meta
+          name='description'
+          content="Viaggia tra i sapori della terra Pavese e dell'oltrepò. Qui all'Osteria della Madonna in pieno centro a Pavia troverai degli ottimi accompagnatori. SPIRITO TRADIZIONALE MA ATTENTO AL FUTURO"
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta
           name='google-site-verification'
