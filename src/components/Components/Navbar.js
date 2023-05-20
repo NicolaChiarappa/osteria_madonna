@@ -19,7 +19,9 @@ const Navbar = () => {
     <>
       <nav className='flex flex-row sticky top-0 w-full  text-white z-30 justify-between  h-fit bg-secondary items-center py-3 '>
         <Link href='/' className='ml-7' title='Home'>
-          <Image alt='' src='/logo.svg' width={100} height={100}></Image>
+          <HStack style='w-[100px] h-[100px]'>
+            <Image alt='' src='/logo.svg' width={100} height={100}></Image>
+          </HStack>
         </Link>
         <NavItems></NavItems>
 
